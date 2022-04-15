@@ -1,19 +1,19 @@
 
-document.querySelector('.nikDefault').onclick = clickDefault;
+document.querySelector('.nikDefault').onclick = clickDefault();
 
 function clickDefault() {
-   let a = document.querySelector('.userName').value;
-   let b = document.querySelector('.userLastName').value;
+   const firstnameField = document.querySelector('.userName');
+   const lastnameField = document.querySelector('.userLastName');
 
    function ucFirst(word) {
       if (!word) return word;
       
       return word[0].toUpperCase() + word.slice(1);
-    }
-
-   let c = ucFirst(a) + ' ' + ucFirst(b);
-   document.querySelector('.outDefault').innerHTML = c;
-
+   }
+   
+   return () => {
+      document.querySelector('.outDefault').innerHTML = `${ucFirst(firstnameField.value)} ${ucFirst(lastnameField.value)}`;
+   }
 }
 
 document.querySelector('.nikGenerate').onclick = clickGenerate;
