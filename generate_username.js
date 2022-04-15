@@ -1,10 +1,3 @@
-//let username = document.querySelector('.userName').value;
-
-//let userlastname = document.querySelector('.userLastName').value;
-
-//let nikDefault = 'username' + ' ' + 'userlastname';
-
-//console.log(nikDefault);
 
 document.querySelector('.nikDefault').onclick = clickDefault;
 
